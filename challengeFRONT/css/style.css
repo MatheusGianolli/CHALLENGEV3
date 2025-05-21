@@ -1,0 +1,730 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1.125rem;
+  background-color: #f0f4f8;
+  color: #222;
+  line-height: 1.7;
+  font-smooth: always;
+  transition: font-size 0.3s ease;
+}
+
+/* Utilidades */
+.container {
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+
+
+/* Cabeçalho */
+.header {
+  background: linear-gradient(90deg, #004080, #0077b6);
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  z-index: 10;
+  border-bottom: 3px solid #003366;
+}
+
+/* Título institucional */
+.header h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1px;
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Navegação */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 90px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  color: #fff;
+  font-size: 1.05rem;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.nav a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #ffea00;
+  transition: width 0.4s ease;
+  margin-top: 5px;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: #ffea00;
+}
+
+/* Botão de acessibilidade */
+.btn-access {
+  display: block;
+  margin: 15px auto 0;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #ffe082, #ffc107);
+  color: #212121;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-access:hover {
+  background: linear-gradient(to right, #ffca28, #ffb300);
+  transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .header h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn-access {
+    width: 90%;
+  }
+}
+
+
+/* Conteúdo */
+.main-home .hero {
+  text-align: center;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+/* FAQ */
+.faq details {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.faq summary {
+  font-weight: bold;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* Contato */
+.contato form {
+  display: grid;
+  gap: 15px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+}
+
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #007bff;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #003c6e;
+  color: white;
+  text-align: center;
+  padding: 20px 10px
+}
+
+.agendamento h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.agendamento form {
+  display: grid;
+  gap: 15px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.05);
+  max-width: 600px;
+  margin: auto;
+}
+
+.agendamento form label {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.agendamento form input,
+.agendamento form select {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  transition: border 0.2s;
+}
+
+.agendamento form input:focus,
+.agendamento form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.btn-primary {
+  padding: 15px;
+  font-size: 1.1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+.btn-voice {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.btn-voice:hover {
+  background-color: #0056b3;
+}
+
+.btn-libras {
+  margin-top: 15px;
+  padding: 12px 25px;
+  background-color: #17a2b8;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-libras:hover {
+  background-color: #138496;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  background-image: url('image/batimento.webp'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.header {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7); 
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  color: #333;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+.btn-primary {
+  background-color: #008CBA;
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #005f73;
+}
+
+.whatsapp-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.whatsapp-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background-color: #25D366; /* Cor do WhatsApp */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.whatsapp-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.whatsapp-link:hover {
+  background-color: #128C7E; /* Cor de hover do WhatsApp */
+}
+
+/* Reset e tipografia básica */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(90deg, #005b9f, #007bba);
+  padding: 20px 0;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  font-size: 1.1rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffea00;
+}
+
+.btn-access, .btn-libras {
+  background-color: #ffc107;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-voice {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.btn-voice:hover {
+  background-color: #0056b3;
+}
+
+/* FAQ */
+.faq-item {
+  margin-bottom: 20px;
+  animation: fadeIn 0.8s ease-out;
+}
+
+details {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+details summary {
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+details summary:hover {
+  color: #007bff;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover nos detalhes */
+details p {
+  margin-top: 10px;
+  color: #666;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+details:hover {
+  background-color: #f0f0f0;
+}
+
+details:focus-within summary {
+  color: #007bff;
+}
+
+/* Footer */
+footer {
+  background-color: #003c6e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+
+.faq-item {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.faq-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn-access, .btn-libras {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+
+  .btn-voice {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+.contato h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #003c6e;
+  animation: fadeInDown 0.6s ease-in-out;
+}
+
+.contato form {
+  display: grid;
+  gap: 15px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  animation: fadeIn 1s ease;
+}
+
+.contato form input,
+.contato form textarea {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contato form input:focus,
+.contato form textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.2);
+  outline: none;
+}
+
+.mensagem-sucesso {
+  display: none;
+  text-align: center;
+  margin-top: 20px;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+  animation: fadeIn 1s ease;
+}
+
+
+.btn-primary {
+  padding: 15px;
+  font-size: 1.1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #218838;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+  
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  body {
+    background-color: #e0f7fa;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+
+@media (max-width: 767px) {
+  body {
+    background-color: #ffe0b2;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+.card-instrucoes {
+  background: linear-gradient(to right, #e0f0ff, #ffffff);
+  padding: 20px;
+  border-left: 6px solid #0d6efd;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.instrucoes {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.instrucoes li {
+  padding: 12px 15px;
+  background: #f8fbff;
+  margin-bottom: 10px;
+  border-left: 4px solid #0d6efd;
+  border-radius: 6px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.instrucoes li:hover {
+  transform: translateX(5px);
+  background-color: #e8f0ff;
+}
+
+.video-box {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.btn-primary.animated {
+  background: linear-gradient(to right, #007bff, #0056b3);
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary.animated:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.video-simulador {
+  background-color: #f1f9ff;
+  border: 2px dashed #0d6efd;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 30px;
+  transition: all 0.5s ease-in-out;
+}
+
+.video-simulador video {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.video-simulador.hidden {
+  display: none;
+}
+
+.video-box form {
+  margin-top: 15px;
+}
+
+.video-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}

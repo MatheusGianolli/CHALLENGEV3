@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital HC - Início</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Adicionando o link do WhatsApp -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>🏥 Hospital HC</h1>
+      <nav class="nav">
+
+        <a href="index.html">Início</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+         <a href="teleatendimento.html">Teleatendimento</a>
+      </nav>
+      <button class="btn-access" onclick="aumentarFonte()">Aumentar Fonte 🔍</button>
+    </div>
+    <button class="btn-libras" onclick="ativarLibras()">🧏‍♂️ Ativar Libras</button>
+  </header>
+
+  <main class="container main-home">
+    <section class="hero">
+      <h2>Bem-vindo ao Hospital HC</h2>
+      <p>Atendimento de qualidade com telemedicina 24h. Cuidamos de você com atenção e carinho.</p>
+      <a href="agendamento.html" class="btn-primary">Agendar Consulta</a>
+      
+      <!-- Botão de leitura para acessibilidade -->
+      <button class="btn-voice" onclick="lerConteudo()">🔊 Ouvir conteúdo</button>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Hospital HC. Todos os direitos reservados.</p>
+    <!-- Adicionando o WhatsApp fictício -->
+    <div class="whatsapp-contact">
+      <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-link">
+        <!-- Alteração do caminho da imagem para garantir que ela seja carregada corretamente -->
+      
+        <span>Entre em contato pelo WhatsApp</span>
+      </a>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <!-- Plugin VLibras -->
+   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  
+  <script>
+    function ativarLibras() {
+      // Verifica se o VLibras já foi ativado
+      if (!window.vlibrasAtivado) {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        window.vlibrasAtivado = true; // Marca como ativado para evitar múltiplos carregamentos
+      }
+    }
+  </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

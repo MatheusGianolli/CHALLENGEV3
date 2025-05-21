@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital HC - Teleatendimento</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>🏥 Hospital HC</h1>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+        <a href="teleatendimento.html">Teleatendimento</a>
+      </nav>
+      <button class="btn-access" onclick="aumentarFonte()">Aumentar Fonte 🔍</button>
+      <button class="btn-libras" onclick="ativarLibras()">🧏‍♂️ Ativar Libras</button>
+    </div>
+  </header>
+
+  <main class="container teleatendimento">
+    <h2>📹 Entrar na Sala de Teleatendimento</h2>
+
+    <div class="card-instrucoes">
+      <p>Antes de iniciar sua consulta por vídeo, siga estas orientações:</p>
+      <ul class="instrucoes">
+        <li>🔆 Esteja em um ambiente bem iluminado.</li>
+        <li>🎥 Posicione a câmera de modo que seu rosto fique visível.</li>
+        <li>📶 Verifique se sua conexão com a internet está estável.</li>
+        <li>📝 Tenha seus documentos e exames em mãos.</li>
+        <li>🔇 Reduza ruídos ao seu redor e mantenha o ambiente silencioso.</li>
+        <li>⏰ Verifique o horário em que sua consulta foi agendada.</li>
+      </ul>
+    </div>
+
+   <div class="video-box">
+  <p>Para entrar na sala com o médico, confirme seu nome abaixo:</p>
+
+  <form id="formConfirmacao" onsubmit="return confirmarConsulta(event)">
+    <input type="text" id="nomePaciente" name="nomePaciente" placeholder="Digite seu nome completo" required />
+    <button type="submit" class="btn-primary animated">Confirmar e Entrar na Sala 🔗</button>
+  </form>
+</div>
+
+
+   <div id="simulacaoVideo" class="video-simulador hidden">
+  <h3>🔴 Conectando com o médico...</h3>
+  <p>Olá, <span id="nomePacienteSimulado"></span>! Você está em uma chamada simulada.</p>
+  <video autoplay muted loop playsinline>
+    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo.
+  </video>
+</div>
+
+    <button class="btn-voice" onclick="lerConteudo()">🔊 Ouvir conteúdo</button>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Hospital HC</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

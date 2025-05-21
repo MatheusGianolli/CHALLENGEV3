@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital HC - Agendamento</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>🏥 Hospital HC</h1>
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contato.html">Contato</a>
+        <a href="teleatendimento.html">Teleatendimento</a>
+      </nav>
+      <button class="btn-access" onclick="aumentarFonte()">Aumentar Fonte 🔍</button>
+      <button class="btn-libras" onclick="ativarLibras()">🧏‍♂️ Ativar Libras</button>
+    </div>
+  </header>
+
+  <main class="container agendamento">
+    <h2>📅 Agendamento de Teleatendimento</h2>
+    <form onsubmit="return enviarAgendamento(event)">
+      <label for="nome">👤 Nome completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">📧 E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="data">🗓 Data da consulta:</label>
+      <input type="date" id="data" name="data" required>
+
+      <label for="hora">⏰ Horário:</label>
+      <input type="time" id="hora" name="hora" required>
+
+      <label for="especialidade">🏥 Especialidade:</label>
+      <select id="especialidade" name="especialidade" required>
+        <option value="">Selecione...</option>
+        <option value="clinico">Clínico Geral</option>
+        <option value="geriatra">Geriatra</option>
+        <option value="psicologo">Psicólogo</option>
+        <option value="nutricionista">Nutricionista</option>
+      </select>
+
+      <button type="submit" class="btn-primary">Confirmar Agendamento</button>
+    </form>
+    <button class="btn-voice" onclick="lerConteudo()">🔊 Ouvir conteúdo</button>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Hospital HC</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
