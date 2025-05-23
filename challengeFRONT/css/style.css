@@ -282,12 +282,14 @@ textarea:focus {
 }
 
 
+
 body {
-  margin: 0;
+
+ margin: 0;
   padding: 0;
   height: 100vh;
   position: relative;
-  background-image: url('image/batimento.webp'); 
+  background-image: url('image/batimento2.jpg'); 
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -304,7 +306,7 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .hero {
