@@ -730,3 +730,80 @@ footer p {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
+
+
+body.integrantes-page {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+body.integrantes-page header {
+  background-color: #e0f0ff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+body.integrantes-page nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: bold;
+}
+
+body.integrantes-page nav a:hover {
+  text-decoration: underline;
+}
+
+body.integrantes-page main {
+  padding: 20px;
+}
+
+body.integrantes-page #integrantes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+body.integrantes-page #integrantes article {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.integrantes-page #integrantes figure {
+  margin: 0;
+}
+
+body.integrantes-page #integrantes img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+body.integrantes-page #integrantes figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+body.integrantes-page #integrantes .links a {
+  display: inline-block;
+  margin: 5px 8px;
+  color: #0077cc;
+  text-decoration: none;
+}
+
+body.integrantes-page #integrantes .links a:hover {
+  text-decoration: underline;
+}
+
+body.integrantes-page #integrantes h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
