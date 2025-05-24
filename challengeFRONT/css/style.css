@@ -767,8 +767,9 @@ body.integrantes-page #integrantes {
 }
 
 body.integrantes-page #integrantes article {
-  background-color: #fff;
-  border: 1px solid #ccc;
+   background-color: #000;         /* fundo preto */
+  border: 2px solid red;          /* borda vermelha */
+  color: white;                   /* texto branco para contraste */
   border-radius: 10px;
   padding: 20px;
   width: 300px;
